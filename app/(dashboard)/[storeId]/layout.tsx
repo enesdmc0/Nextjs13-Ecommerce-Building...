@@ -1,7 +1,7 @@
-
 import prisma from '@/lib/prismadb';
 import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
+import Navbar from '@/components/Navbar';
 import React from 'react'
 
 interface Props {
@@ -32,7 +32,7 @@ const DashboardLayout: React.FC<Props> = async ({children, params}) => {
 
   return (
     <>
-    <div>This will be a navbar</div>
+    <Navbar />
     {children}
     </>
   )
