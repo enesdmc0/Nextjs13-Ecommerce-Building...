@@ -1,7 +1,7 @@
 import React from 'react';
 import {auth, UserButton} from "@clerk/nextjs";
-import MainNav from "@/components/MainNav";
-import StoreSwitcher from "@/components/StoreSwitcher";
+import MainNav from "../main-nav";
+import StoreSwitcher from "../store-switcher";
 import {redirect} from "next/navigation";
 import prisma from "@/lib/prismadb"
 
