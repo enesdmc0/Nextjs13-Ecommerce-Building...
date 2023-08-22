@@ -43,14 +43,14 @@ const SettingsForm: React.FC<Props> = ({initialData}) => {
 
     const onSubmit = async (data: SettingsFormValues) => {
         try {
-            setOpen(true)
+            setLoading(true)
             await axios.patch(`/api/stores/${params.storeId}`, data)
             router.refresh();
             toast.success("Store updated.")
         } catch (error) {
             toast.error("Something went wrong.")
         } finally {
-            setOpen(false)
+            setLoading(false)
         }
     }
 
