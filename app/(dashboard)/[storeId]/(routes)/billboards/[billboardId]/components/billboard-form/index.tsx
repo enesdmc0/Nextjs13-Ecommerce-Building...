@@ -14,7 +14,6 @@ import {Input} from "@/components/ui/input";
 import {toast} from "react-hot-toast";
 import axios from "axios";
 import AlertModal from "@/components/modals/alert-modal";
-import useOrigin from "@/hooks/use-origin";
 import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object({
@@ -32,7 +31,6 @@ interface Props {
 const BillboardForm: React.FC<Props> = ({initialData}) => {
     const params = useParams();
     const router = useRouter();
-    const origin = useOrigin()
 
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false)
@@ -143,7 +141,6 @@ const BillboardForm: React.FC<Props> = ({initialData}) => {
                     <Button disabled={loading} className="ml-auto" type="submit">{action}</Button>
                 </form>
             </Form>
-            <Separator/>
         </>
     );
 };
