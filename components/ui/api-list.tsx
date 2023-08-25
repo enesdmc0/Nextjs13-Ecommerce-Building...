@@ -25,7 +25,7 @@ const ApiList: React.FC<Props> = ({entityIdName, entityName}) => {
             <ApiAlert
                 title="GET"
                 variant="public"
-                description={`${baseUrl}/${entityName}/{${entityIdName}`}
+                description={`${baseUrl}/${entityName}/{${entityIdName}}`}
             />
             <ApiAlert
                 title="POST"
@@ -35,12 +35,12 @@ const ApiList: React.FC<Props> = ({entityIdName, entityName}) => {
             <ApiAlert
                 title="PATCh"
                 variant="admin"
-                description={`${baseUrl}/${entityName}/{${entityIdName}`}
+                description={`${baseUrl}/${entityName}/{${entityIdName}}`}
             />
             <ApiAlert
                 title="DELETE"
                 variant="admin"
-                description={`${baseUrl}/${entityName}/{${entityIdName}`}
+                description={`${baseUrl}/${entityName}/{${entityIdName}}`}
             />
         </>
     );
